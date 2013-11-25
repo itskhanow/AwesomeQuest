@@ -24,7 +24,7 @@ public class LevelController : MonoBehaviour {
 	
 	private void spawnPlayer() {
 		GameObject.Instantiate(Resources.Load("Prefabs/BuddyController"),
-		                       GameObject.FindGameObjectWithTag("Player").transform.position + new Vector3 (0, 1, 0),
+		                       GameObject.FindGameObjectWithTag("Player").transform.position,
 		                       GameObject.FindGameObjectWithTag("Player").transform.rotation);
 		GameObject[] exitZones = GameObject.FindGameObjectsWithTag("ExitZone");
 		foreach(GameObject exitZone in exitZones) {

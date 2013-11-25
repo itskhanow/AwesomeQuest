@@ -3,10 +3,12 @@ using System.Collections;
 
 public class MainCamera : MonoBehaviour {
 
-	public int smooth = 3;
+	public float smooth = 3f;
 	public Transform target;
+	public float camZ = -20f;
 
 	private Transform player;
+	private float toSize;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,10 @@ public class MainCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector2.Lerp(transform.position, player.position, smooth * Time.deltaTime);
+		transform.position = Vector2.Lerp(transform.position, target.position, smooth * Time.deltaTime);
+		//transform.position.x = Mathf.Lerp(transform.position.x, target.position.x, smooth * Time.deltaTime);
+		//transform.position.y = Mathf.Lerp(transform.position.y, target.position.y, smooth * Time.deltaTime);
+		toSize = 5f + (player.rigidbody2D.velocity.magnitude / 2);
+		camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, toSize, smooth * Time.deltaTime);
 	}
 }

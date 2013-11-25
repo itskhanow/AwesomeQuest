@@ -12,14 +12,14 @@ public class BuddyCollider : MonoBehaviour {
 	void Update() {
 	
 	}
-	
-	void OnTriggerEnter(Collider other) {
+
+	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			transform.parent.GetComponent<Follow>().move = false;
 		}
 	}
 	
-	void OnTriggerExit(Collider other) {
+	void OnTriggerExit2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			transform.parent.GetComponent<Follow>().move = true;
 		}

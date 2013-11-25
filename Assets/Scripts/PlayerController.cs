@@ -10,24 +10,20 @@ public class PlayerController : MonoBehaviour {
 	private PlayerState curState;
 	private int curCharacter;
 	private Vector2 moveDirection;
+	private float moveMagnitude;
 
 	// Use this for initialization
 	void Start() {
 		buddy = GameObject.FindGameObjectWithTag("Buddy").transform;
-		if(GameManager.Instance.getCurChar() == 1) {
-			transform.GetChild(0).renderer.enabled = true;
-			transform.GetChild(1).renderer.enabled = false;
-			buddy.GetChild(0).renderer.enabled = false;
-			buddy.GetChild(2).renderer.enabled = true;
-		} else if(GameManager.Instance.getCurChar() == 2) {
+		if(GameManager.Instance.getCurChar() == 2) {
 			transform.GetChild(0).renderer.enabled = false;
 			transform.GetChild(1).renderer.enabled = true;
-			buddy.GetChild(0).renderer.enabled = true;
+			buddy.GetChild(1).renderer.enabled = true;
 			buddy.GetChild(2).renderer.enabled = false;
 		} else {
 			transform.GetChild(0).renderer.enabled = true;
 			transform.GetChild(1).renderer.enabled = false;
-			buddy.GetChild(0).renderer.enabled = false;
+			buddy.GetChild(1).renderer.enabled = false;
 			buddy.GetChild(2).renderer.enabled = true;
 		}
 		//temporary, check for persistence values from gamemanager
@@ -63,13 +59,13 @@ public class PlayerController : MonoBehaviour {
 		if(GameManager.Instance.getCurChar() == 1) {
 			transform.GetChild(0).renderer.enabled = false;
 			transform.GetChild(1).renderer.enabled = true;
-			buddy.GetChild(0).renderer.enabled = true;
+			buddy.GetChild(1).renderer.enabled = true;
 			buddy.GetChild(2).renderer.enabled = false;
 			GameManager.Instance.setCurChar(2);
 		} else if(GameManager.Instance.getCurChar() == 2) {
 			transform.GetChild(0).renderer.enabled = true;
 			transform.GetChild(1).renderer.enabled = false;
-			buddy.GetChild(0).renderer.enabled = false;
+			buddy.GetChild(1).renderer.enabled = false;
 			buddy.GetChild(2).renderer.enabled = true;
 			GameManager.Instance.setCurChar(1);
 		}
@@ -81,7 +77,13 @@ public class PlayerController : MonoBehaviour {
 
 		moveDirection = (Vector2.up * v) + (Vector2.right * h);
 
-		rigidbody2D.velocity = moveDirection * moveSpeed;
+		if(moveDirection.magnitude < 1f) {
+			moveMagnitude = moveDirection.magnitude;
+		} else {
+			moveMagnitude = 1f;
+		}
+
+		rigidbody2D.velocity = moveDirection.normalized * moveMagnitude * moveSpeed;
 
 	}
 
