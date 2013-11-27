@@ -16,13 +16,13 @@ public class ChiggerDetectionRadius : MonoBehaviour {
 	void FixedUpdate() {
 	}
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			transform.parent.GetComponent<ChiggerAI>().pursue = true;
 		}
 	}
 
-	void OnTriggerExit(Collider other) {
+	void OnTriggerExit2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			transform.parent.GetComponent<ChiggerAI>().pursue = false;
 		}

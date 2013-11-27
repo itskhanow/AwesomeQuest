@@ -8,12 +8,11 @@ public class ChiggerAI : MonoBehaviour {
 	public bool pursue;
 
 	private Transform player;
-	private Animator anim;
+	private Vector2 moveDirection;
 
 	// Use this for initialization
 	void Start() {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
-		anim = transform.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -23,14 +22,15 @@ public class ChiggerAI : MonoBehaviour {
 
 	void FixedUpdate() {
 		if(pursue) {
-			transform.LookAt(player.position);
-			rigidbody.velocity = transform.TransformDirection(Vector3.forward * speed);
+			//transform.LookAt(player.position);
+			moveDirection = player.position - transform.position;
+			rigidbody2D.velocity = moveDirection.normalized * speed;
 			//animation.Play("Crawl_Chigger");
 		} else {
-			rigidbody.velocity = transform.TransformDirection(Vector3.forward * 0);
+			rigidbody2D.velocity = new Vector2();
 			//animation.Play("Idle_Chigger");
 		}
 
-		anim.SetFloat("Speed", rigidbody.velocity.magnitude);
+		//anim.SetFloat("Speed", rigidbody.velocity.magnitude);
 	}
 }

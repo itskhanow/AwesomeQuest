@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	private int curCharacter;
 	private Vector2 moveDirection;
 	private float moveMagnitude;
+	private Vector2 lookVector;
 
 	// Use this for initialization
 	void Start() {
@@ -50,8 +51,9 @@ public class PlayerController : MonoBehaviour {
 	void shoot() {
 		GameObject bullet;
 		bullet = GameObject.Instantiate(Resources.Load("Prefabs/RangedAttack"), transform.position, transform.rotation) as GameObject;
-		Physics.IgnoreCollision(bullet.collider, collider);
-		bullet.rigidbody.velocity = transform.TransformDirection(Vector3.forward * 20);
+		if(lookVector.magnitude > 0f) {
+			bullet.rigidbody2D.velocity = lookVector.normalized * 20;
+		}
 	}
 	
 	void switchCharacter() {
@@ -83,7 +85,12 @@ public class PlayerController : MonoBehaviour {
 			moveMagnitude = 1f;
 		}
 
-		rigidbody2D.velocity = moveDirection.normalized * moveMagnitude * moveSpeed;
+		if(moveDirection.magnitude > 0.5f) {
+			lookVector = moveDirection.normalized;
+		}
+
+		moveDirection.Normalize();
+		rigidbody2D.velocity = moveDirection * moveMagnitude * moveSpeed;
 
 	}
 

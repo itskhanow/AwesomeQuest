@@ -21,7 +21,7 @@ public class RangedAttack : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Enemy")) {
 			other.GetComponent<Enemy>().damaged(damage);
 			Destroy(gameObject);
