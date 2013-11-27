@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		if(curHealth <= 0) {
 			//Destroy(gameObject);
-			GameObject.Instantiate(Resources.Load("Prefabs/DestructionParticles"), transform.position, transform.rotation);
+			GameObject.Instantiate(Resources.Load("Prefabs/Fire"), transform.position, Quaternion.identity);
 			gameObject.SetActive(false);
 		}
 	}

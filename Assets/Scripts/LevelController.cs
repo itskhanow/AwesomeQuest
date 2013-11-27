@@ -31,7 +31,7 @@ public class LevelController : MonoBehaviour {
 			if(exitZone.GetComponent<ExitZone>().spawnID == GameManager.Instance.destID
 				&& GameManager.Instance.changedLevel == true) {
 				GameObject.FindGameObjectWithTag("Player").transform.position = exitZone.transform.position;
-				GameObject.FindGameObjectWithTag("Buddy").transform.position = exitZone.transform.position + exitZone.transform.forward;
+				GameObject.FindGameObjectWithTag("Buddy").transform.position = exitZone.transform.position + exitZone.transform.up;
 			}
 		}
 

@@ -8,8 +8,8 @@ public class Activate : MonoBehaviour {
 	public float dialogTime = 5f;
 	Rect messageBox;
 	float timeRemaining;
-	bool colliding;
-	bool showDialog;
+	public bool colliding;
+	public bool showDialog;
 
 	// Use this for initialization
 	void Start() {
@@ -40,35 +40,32 @@ public class Activate : MonoBehaviour {
 				GameManager.Instance.state = GameManager.StateType.EXPLORE;
 			}
 		}
-	}
-	
-	void OnTriggerStay(Collider other) {
-		if(other.tag.Equals("Player")) {
-			if(Input.GetButtonDown("Activate")) {
-				if(showDialog == false) {
-					showDialog = true;
-					timeRemaining = dialogTime;
-					if(cutscene == true) {
-						GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RPGCamera>().cutsceneCam = transform.GetChild(0).transform;
-						GameManager.Instance.state = GameManager.StateType.CUTSCENE;
-					}
-				} else {
-					showDialog = false;
-					if(cutscene == true) {
-						GameManager.Instance.state = GameManager.StateType.EXPLORE;
-					}
+
+		if(Input.GetButtonDown("Activate") && colliding == true) {
+			Debug.Log("Activate");
+			if(showDialog == false) {
+				showDialog = true;
+				timeRemaining = dialogTime;
+				if(cutscene == true) {
+					GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RPGCamera>().cutsceneCam = transform.GetChild(0).transform;
+					GameManager.Instance.state = GameManager.StateType.CUTSCENE;
+				}
+			} else {
+				showDialog = false;
+				if(cutscene == true) {
+					GameManager.Instance.state = GameManager.StateType.EXPLORE;
 				}
 			}
 		}
 	}
 	
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			colliding = true;
 		}
 	}
 	
-	void OnTriggerExit(Collider other) {
+	void OnTriggerExit2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			colliding = false;
 		}

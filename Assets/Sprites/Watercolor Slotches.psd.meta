@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: c50dbd5eb9c4c2a44a04134fa89db51d
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Watercolor Slotches_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 878
+        width: 130
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 851
+        width: 147
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 866
+        width: 114
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_3
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 841
+        width: 75
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_4
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 843
+        width: 113
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_5
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 866
+        width: 112
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 713
+        width: 118
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 704
+        width: 84
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_8
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 701
+        width: 94
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_9
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 728
+        width: 119
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_10
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 711
+        width: 104
+        height: 109
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_11
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 745
+        width: 120
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_12
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 580
+        width: 123
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_13
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 572
+        width: 115
+        height: 81
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_14
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 565
+        width: 89
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_15
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 593
+        width: 40
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_16
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 595
+        width: 42
+        height: 115
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_17
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 608
+        width: 124
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 426
+        width: 70
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_19
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 419
+        width: 105
+        height: 119
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 422
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_21
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 444
+        width: 122
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_22
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 431
+        width: 120
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_23
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 266
+        width: 120
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_24
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 263
+        width: 116
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_25
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 259
+        width: 85
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_26
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 266
+        width: 112
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_27
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 264
+        width: 86
+        height: 119
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_28
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 287
+        width: 108
+        height: 106
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_29
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 93
+        width: 43
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Watercolor Slotches_30
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 130
+        width: 132
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

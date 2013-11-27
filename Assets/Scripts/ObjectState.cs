@@ -5,7 +5,7 @@ public class ObjectState : MonoBehaviour {
 	
 	public string mobName;
 	public int levelID;
-	private Vector3 position;
+	private Vector2 position;
 	private bool isAlive;
 	
 	public int LevelID {

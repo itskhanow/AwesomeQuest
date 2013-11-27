@@ -24,6 +24,7 @@ public class RangedAttack : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Enemy")) {
 			other.GetComponent<Enemy>().damaged(damage);
+			GameObject.Instantiate(Resources.Load("Prefabs/Sparks"), transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 	}

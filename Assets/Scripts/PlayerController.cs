@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 			moveMagnitude = 1f;
 		}
 
-		if(moveDirection.magnitude > 0.5f) {
+		if(moveDirection.magnitude > 0.3f) {
 			lookVector = moveDirection.normalized;
 		}
 

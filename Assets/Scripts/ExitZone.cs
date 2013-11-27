@@ -7,7 +7,7 @@ public class ExitZone : MonoBehaviour {
 	public int toLevel;
 	public int destID;
 	
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Player") && GameManager.Instance.changedLevel == false) {
 			GameManager.Instance.destID = this.destID;
 			GameObject.Find("LevelController").GetComponent<LevelController>().changeLevel(toLevel);
@@ -15,7 +15,7 @@ public class ExitZone : MonoBehaviour {
 		
 	}
 	
-	void OnTriggerExit(Collider other) {
+	void OnTriggerExit2D(Collider2D other) {
 		if(other.tag.Equals("Player")) {
 			GameManager.Instance.changedLevel = false;
 		}

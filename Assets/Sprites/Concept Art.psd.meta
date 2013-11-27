@@ -41,7 +41,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Concept Art_0
+    - name: Josh_Sprite
       rect:
         serializedVersion: 2
         x: 106
@@ -50,14 +50,32 @@ TextureImporter:
         height: 138
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: Concept Art_1
+    - name: Khan_Sprite
       rect:
         serializedVersion: 2
-        x: 248
+        x: 252
         y: 828
-        width: 108
+        width: 104
         height: 185
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+    - name: Chigger_Sprite
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 873
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Cockroach_Sprite
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 634
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
