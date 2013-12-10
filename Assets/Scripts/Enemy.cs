@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	public void damaged(int damage) {
+	public void damaged(int damage, int damageType) {
 		curHealth -= damage;
 	}
 }

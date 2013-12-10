@@ -42,7 +42,6 @@ public class Activate : MonoBehaviour {
 		}
 
 		if(Input.GetButtonDown("Activate") && colliding == true) {
-			Debug.Log("Activate");
 			if(showDialog == false) {
 				showDialog = true;
 				timeRemaining = dialogTime;

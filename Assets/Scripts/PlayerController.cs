@@ -42,6 +42,9 @@ public class PlayerController : MonoBehaviour {
 			switchCharacter();
 		}
 		if(Input.GetButtonDown("Attack")) {
+			melee();
+		}
+		if(Input.GetButtonDown("Ranged")) {
 			shoot();
 		}
 
@@ -79,6 +82,29 @@ public class PlayerController : MonoBehaviour {
 		bullet = GameObject.Instantiate(Resources.Load("Prefabs/RangedAttack"), transform.position, transform.rotation) as GameObject;
 		if(lookVector.magnitude > 0f) {
 			bullet.rigidbody2D.velocity = lookVector.normalized * 20;
+		}
+	}
+
+	void melee() {
+		if(GameManager.Instance.getCurChar() == 1) {
+			Quaternion swingDir = new Quaternion();
+			switch(playerDirection) {
+			case PlayerDirection.UP:
+				swingDir.eulerAngles = new Vector3(0, 0, 0);
+				break;
+			case PlayerDirection.RIGHT:
+				swingDir.eulerAngles = new Vector3(0, 0, 270);
+				break;
+			case PlayerDirection.DOWN:
+				swingDir.eulerAngles = new Vector3(0, 0, 180);
+				break;
+			case PlayerDirection.LEFT:
+				swingDir.eulerAngles = new Vector3(0, 0, 90);
+				break;
+			}
+			GameObject sword;
+			sword = GameObject.Instantiate(Resources.Load("Prefabs/Sword"), transform.position, swingDir) as GameObject;
+			sword.transform.parent = transform;
 		}
 	}
 	

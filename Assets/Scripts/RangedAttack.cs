@@ -4,6 +4,7 @@ using System.Collections;
 public class RangedAttack : MonoBehaviour {
 	
 	public int damage;
+	public int damageType;
 	public int speed;
 	public float lifeTime;
 
@@ -23,7 +24,7 @@ public class RangedAttack : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.tag.Equals("Enemy")) {
-			other.GetComponent<Enemy>().damaged(damage);
+			other.GetComponent<Enemy>().damaged(damage, damageType);
 			GameObject.Instantiate(Resources.Load("Prefabs/Sparks"), transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
